@@ -29,6 +29,19 @@ body {
   line-height: 1.65;
 }
 
+.funding-banner {
+  max-width: 1100px;
+  margin: 12px auto 0;
+  padding: 10px 14px;
+  border: 1px solid rgba(74, 110, 36, 0.32);
+  border-radius: 12px;
+  background: linear-gradient(130deg, #edf6de, #dce9c6);
+  color: #2c4320;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
 .noise {
   position: fixed;
   inset: 0;
@@ -240,6 +253,53 @@ main {
   color: #2f3531;
 }
 
+.panel h3 {
+  margin: 16px 0 8px;
+  font-size: clamp(1.02rem, 2.2vw, 1.24rem);
+}
+
+.panel h4 {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.lead-text {
+  margin-top: 2px;
+  font-weight: 700;
+  color: #2c4320;
+}
+
+.panel ul {
+  margin: 8px 0 0;
+  padding-left: 20px;
+}
+
+.panel li + li {
+  margin-top: 6px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.info-grid article {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px;
+  background: linear-gradient(140deg, #ffffff, #eff6e3);
+}
+
+.info-grid p {
+  margin: 6px 0 0;
+  font-size: 1.04rem;
+  font-weight: 800;
+  color: #2f4a22;
+}
+
 .service-grid {
   margin-top: 12px;
   display: grid;
@@ -328,6 +388,13 @@ main {
 }
 
 @media (max-width: 720px) {
+  .funding-banner {
+    margin: 8px 10px 0;
+    padding: 9px 10px;
+    font-size: 0.83rem;
+    border-radius: 10px;
+  }
+
   .site-header {
     margin: 10px 10px 0;
   }
@@ -368,6 +435,10 @@ main {
 
   .stats,
   .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-grid {
     grid-template-columns: 1fr;
   }
 }
